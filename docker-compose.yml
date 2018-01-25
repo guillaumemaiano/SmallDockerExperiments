@@ -1,0 +1,14 @@
+### Build using: `docker-compose up`
+# version of the compose tool to be used
+version: '3'
+# services to be exposed
+services:
+# pull the redis image from the Docker Hub definition
+ redis: 
+  image: "redis:alpine"
+# define my demo container based on the dockerfile in the current directory
+ democontainer:
+  build: .
+  # forward the exposed port 80 to port 5000
+  ports: 
+  - "80:5000"

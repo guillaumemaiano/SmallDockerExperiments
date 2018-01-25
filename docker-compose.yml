@@ -12,3 +12,6 @@ services:
   # forward the exposed port 80 to port 5000
   ports: 
   - "80:5000"
+  # adds a volume to mount so we can access the files and change them live
+  volumes:
+  - ./machineRoot:/examples

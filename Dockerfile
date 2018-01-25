@@ -14,6 +14,11 @@ RUN apt-get update
 RUN apt-get install -y curl
 RUN apt-get install -y nginx
 
+# ADD will copy a given directory at the specified location
+ADD demoes/ examples/
+# WORKDIR will set the current directory
+WORKDIR examples
+
 # EXPOSE will listen on a given port
 ## For example, port 80
 EXPOSE 80 
